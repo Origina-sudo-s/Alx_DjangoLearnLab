@@ -10,7 +10,7 @@ urlpatterns = [
 
 # relationship_app
 from django.urls import path
-from . import views
+from .views import admin_view, librarian_view, member_view
 
 urlpatterns = [
     path('admin-view/', views.admin_view, name='admin_view'),
