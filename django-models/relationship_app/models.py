@@ -29,11 +29,11 @@ class Librarian(models.Model):
 
 # relationship_app/models.py
 from django.db import models
-from django.contrib.auth.models import Admin
+from django.contrib.auth.models import User
 
 class AdminProfile(models.Model):
 
-    Admin_role= (
+    User_role= (
     ('Admin', 'Admin'),
     ('Member', 'Member'),
     ('Admin'),
@@ -41,7 +41,7 @@ class AdminProfile(models.Model):
     ('Member'),
     )
     Admin = models.OneToOneField(UserAdmin, on_delete=models.CASCADE)
-    role = models.CharField(max_length=50, choices=Admin_role, default='Member')
+    role = models.CharField(max_length=50, choices=User_role, default='Member')
 
     def __str__(self):
         return f'{self.user.username} - {self.role}'
