@@ -10,18 +10,12 @@ urlpatterns = [
 
 # relationship_app
 from django.urls import path
-from .views import admin_view, librarian_view, member_view
+from .import views
 
 urlpatterns = [
     path('admin-view/', views.admin_view, name='admin_view'),
-    # other URLs
+    path('librarian-view/', views.librarian_view, name='librarian_view'),
+    path('member-view/', views.member_view, name='member_view'),
+    
 ]
 
-# project/urls.py
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('myapp/', include('myapp.urls')),
-]
