@@ -16,3 +16,12 @@ urlpatterns = [
     path('admin-view/', views.admin_view, name='admin_view'),
     # other URLs
 ]
+
+# project/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('myapp/', include('myapp.urls')),
+]
