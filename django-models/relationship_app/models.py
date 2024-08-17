@@ -33,15 +33,15 @@ from django.contrib.auth.models import User
 
 class AdminProfile(models.Model):
 
-    User_role= (
+    USER_ROLES= (
     ('Admin', 'Admin'),
     ('Member', 'Member'),
     ('Admin'),
     ('Librarian', 'Librarian'),
     ('Member'),
     )
-    Admin = models.OneToOneField(UserAdmin, on_delete=models.CASCADE)
-    role = models.CharField(max_length=50, choices=User_role, default='Member')
+    User = models.OneToOneField(User, on_delete=models.CASCADE)
+    role = models.CharField(max_length=50, choices=USER_ROLES, default='Member')
 
     def __str__(self):
         return f'{self.user.username} - {self.role}'
