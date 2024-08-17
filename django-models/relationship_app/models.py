@@ -32,7 +32,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
+
     USER_ROLES = (
+    ('Admin', 'Admin'),
+    ('Member', 'Member'),
     ('Admin'),
     ('Librarian', 'Librarian'),
     ('Member'),
