@@ -31,7 +31,7 @@ class Librarian(models.Model):
 from django.db import models
 from django.contrib.auth.models import User
 
-class AdminProfile(models.Model):
+class UserProfile(models.Model):
 
     USER_ROLES= (
     ('Admin', 'Admin'),
