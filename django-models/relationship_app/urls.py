@@ -35,8 +35,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('register/', views.user_register, name='register'),
-    path('login/', views.user_login, name='login'),
-    path('login/', views.user_logout, name='logout'),
+    path('view.register/', views.user_register, name='register'),
+    path('loginView.as_view/', views.user_login, template_name='login'),
+    path('logoutView.as_view/', views.user_logout, template_name='logout'),
 ]
 
