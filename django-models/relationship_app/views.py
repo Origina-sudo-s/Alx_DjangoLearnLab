@@ -100,6 +100,7 @@ def edit_book(request, pk):
 
 
 # relationship_app/views.py
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import  UserCreationForm
