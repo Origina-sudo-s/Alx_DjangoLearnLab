@@ -27,6 +27,25 @@ class Librarian(models.Model):
     def __str__(self):
         return self.name
 
+
+# relationship_app/models.py
+from django.db import models
+from django.contrib.auth.models import User
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    publication_year = models.IntegerField()
+
+    class Meta:
+        permissions = [
+            ("can_add_book", "can add book"),
+            ("can_change_book", "can change book"),
+            ("can_delete_book", "can delete book"),
+        ]
+    def __str__(self):
+        return self.title
+
 # relationship_app/models.py
 from django.db import models
 from django.contrib.auth.models import User
