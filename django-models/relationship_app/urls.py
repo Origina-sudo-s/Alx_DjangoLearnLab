@@ -37,7 +37,7 @@ from . import views
 
 urlpatterns = [
     path('view.register', views.register, name='register'),
-    path('loginView.as_view', loginView.as_view, template_name='login'),
-    path('logoutView.as_view', logoutViews.as_view, template_name='logout'),
+    path('LoginView.as_view', LoginView.as_view, template_name='login'),
+    path('LogoutView.as_view', LogoutViews.as_view, template_name='logout'),
 ]
 
