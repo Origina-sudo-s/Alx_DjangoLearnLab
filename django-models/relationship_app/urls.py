@@ -31,12 +31,13 @@ urlpatterns = [
 ]
 
 # relationship_app/urls.py
+from django.contrib import admin
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('view.register/', views.register, name='register'),
-    path('loginView.as_view/', loginView.as_view, template_name='login'),
-    path('logoutView.as_view/', logoutViews.as_view, template_name='logout'),
+    path('view.register', views.register, name='register'),
+    path('loginView.as_view', loginView.as_view, template_name='login'),
+    path('logoutView.as_view', logoutViews.as_view, template_name='logout'),
 ]
 
