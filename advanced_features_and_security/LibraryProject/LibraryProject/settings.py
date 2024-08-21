@@ -138,7 +138,7 @@ SECURE_HSTS_PRELOAD = True
 SESSION_COOKIE_SECURE = True
 
 # Ensure CSRF cookies are only transmitted over HTTPS
-CRSF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Prevent the site from being framed
 X_FRAME_OPTIONS = 'DENY'
