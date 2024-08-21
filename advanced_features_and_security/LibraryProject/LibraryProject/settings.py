@@ -148,3 +148,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 # Enable the browser's XSS filtering
 SECURE_BROWSER_XSS_FILTER = True
+
+# Define the header that your proxy uses to indicate the protocol
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Authomatically redirect HTTP request to HTTPS
+SECURE_SSL_REDIRECT = True
