@@ -1,6 +1,7 @@
-<!-- bookshelf/template/bookshelf/ExampleForm.html -->
-<form method="post" action="{% url 'form_view_name' %}">
-     {% csrf_token %}
-     <!-- form fields here -->
-     <input type="submit" value="Submit">
-     </form>
+from django import forms
+from .models import YourModel
+
+class ExampleForm(forms.ModelForm):
+    class Meta:
+        model = YourModel
+        fields = ['field1', 'field2', 'field3']

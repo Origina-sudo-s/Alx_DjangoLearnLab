@@ -20,5 +20,12 @@ def edit_book(request, pk):
 from django import forms
 from.forms import ExampleForm
 
+def example_view(request):
+    form = ExampleForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+    return render(request, 'bookshelf/form_example.html', {'form': form})
+
+
 class BookSearchForm(forms.Form):
     title = forms.CharField(max_length=100)
