@@ -15,3 +15,9 @@ def edit_book(request, pk):
         #Process from submission
         pass
     return render(request, 'edit_book.html', {'books': books})
+
+
+from django import forms
+
+class BookSearchForm(forms.Form):
+    title = forms.CharField(max_length=100)
