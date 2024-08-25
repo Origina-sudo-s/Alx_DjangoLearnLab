@@ -1,4 +1,4 @@
-<!-- bookshelf/template/bookshelf/form_example.html -->
+<!-- bookshelf/template/bookshelf/ExampleForm.html -->
 <form method="post" action="{% url 'form_view_name' %}">
      {% csrf_token %}
      <!-- form fields here -->
